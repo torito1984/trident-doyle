@@ -35,7 +35,7 @@ public class KafkaDump extends BaseFilter {
             producer = new Producer<String, String>(new ProducerConfig(props));
         }
 
-        KeyedMessage<String, String> data = new KeyedMessage<String, String>(topic, tuple.getString(0), "{ 'place':'" + tuple.getString(0) + "', 'count':"+ tuple.getInteger(1) +"'}");
+        KeyedMessage<String, String> data = new KeyedMessage<String, String>(topic, tuple.getString(0), "{ 'place':'" + tuple.getString(0) + "', 'count':"+ tuple.getLong(1) +"'}");
         producer.send(data);
         return true;
     }
