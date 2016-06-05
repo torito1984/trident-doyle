@@ -13,5 +13,7 @@ In order to run the examples:
 - runTopology.sh to run the first example.
 - run-topology-drpc.sh to run the DRPC example.
 
+Once the DRPC topoogy is running, you can query at any time using run-client.sh
+
 The code has been tested with Kafka 0.9.0.4 included in Hortonworks HDP 2.4.0. It supposes that Kafka is available in 
 localhost:6667 and Zookeeper in localhost:2181. These locations can be configured in the scripts. 
